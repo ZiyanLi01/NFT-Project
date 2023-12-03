@@ -1,5 +1,5 @@
 import "./App.css";
-import { Layout } from "antd";
+import { Layout, Input, Button } from "antd";
 
 const { Header, Content } = Layout;
 
@@ -13,7 +13,17 @@ function App() {
       </Header>
       <Content
         style={{ height: "calc(100% - 64px)", padding: 20, overflow: "auto" }}
-      ></Content>
+      >
+        <Input.Group compact>
+          <Input
+            style={{
+              width: "calc(100% - 200px)",
+            }}
+            defaultValue="https://ant.design"
+          />
+          <Button type="primary">Submit</Button>
+        </Input.Group>
+      </Content>
     </Layout>
   );
 }
